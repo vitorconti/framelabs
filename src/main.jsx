@@ -7,8 +7,8 @@ import {
 } from "react-router-dom";
 import "./index.css";
 import NavBar from "./navigation/NavBar";
-import CadastroOs from "./pages/CadastroOs";
-import ConsultaOs from "./pages/ConsultaOs";
+import CadastroOs from "./pages/CadastroOs/CadastroOs";
+import ConsultaOs from "./pages/ConsultaOs/ConsultaOs";
 
 const router = createBrowserRouter([
   {
