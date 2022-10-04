@@ -28,6 +28,7 @@ export default function FormOs() {
                     <Input type={'number'} name='idade' id='idade' key={'idade'} setState={setIdade} state={idade} >Idade</Input>
                 </div>
                 <Input type={'text'} name='cpf' id='cpf' key={'cpf'} setState={setCpf} state={cpf}>CPF</Input>
+                <h3 className="text-xl text-gray-400">Procedimentos</h3>
                 <ProcedureHandle procedimentos={procedimentos} setProcedimentosSelecionados={setProcedimentosSelecionados} />
                 <button type="submit" className="text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-purple-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-800">Submit</button>
             </form>
