@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import procedientoService from "../../../services/procedientoService"
 import Input from "./Input"
+import ProcedureCard from "./ProcedureCard"
 import ProcedureHandle from "./ProcedureHandle"
 
 export default function FormOs() {
@@ -18,6 +19,9 @@ export default function FormOs() {
 
     }, [])
 
+    const onSelectCard = () => {
+        console.log('teste');
+    }
 
     return (
         <div>
@@ -29,7 +33,13 @@ export default function FormOs() {
                 </div>
                 <Input type={'text'} name='cpf' id='cpf' key={'cpf'} setState={setCpf} state={cpf}>CPF</Input>
                 <h3 className="text-xl text-gray-400">Procedimentos</h3>
-                <ProcedureHandle procedimentos={procedimentos} setProcedimentosSelecionados={setProcedimentosSelecionados} />
+                <div className="grid grid-cols-4 mb-2 gap-4 border-b-2 rounded-md border-violet-500 p-2">
+                    {procedimentos.map((procedimento) => {
+                        return <div onClick={onSelectCard} key={procedimento.id}>
+                            <ProcedureCard nome={procedimento.nome} valor={procedimento.valor} />
+                        </div>
+                    })}
+                </div>
                 <button type="submit" className="text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-purple-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-800">Submit</button>
             </form>
 
