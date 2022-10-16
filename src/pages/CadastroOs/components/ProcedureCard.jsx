@@ -2,8 +2,12 @@ import { useEffect, useState } from "react"
 
 const classUnSelected = "cursor-pointer rounded-lg flex items-center shadow-purple-400 p-4 w-52 bg-purple-700"
 const classSelected = "cursor-pointer rounded-lg flex items-center shadow-blue-400 p-4 w-52 bg-blue-500"
-export default function ProcedureCard({ nome, valor, }) {
+export default function ProcedureCard({ nome, valor, limparSelecao }) {
     const [selected, setSelected] = useState(false)
+    useEffect(() => {
+        setSelected(false)
+
+    }, [limparSelecao])
 
 
     return (
