@@ -11,5 +11,10 @@ class OrdemServicoService {
         });
         return response
     }
+    async getOrdemServico() {
+
+        const response = await (await fetch("http://localhost:3000/ordemServico")).json();
+        return response
+    }
 }
 export default new OrdemServicoService()
