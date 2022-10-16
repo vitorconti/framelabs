@@ -1,5 +1,6 @@
 class OrdemServicoService {
     async postOrdemServico(payload) {
+
         const response = await fetch('http://localhost:3000/ordemServico', {
             method: 'POST',
             headers: {
