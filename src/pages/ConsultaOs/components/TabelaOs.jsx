@@ -21,11 +21,11 @@ const TabelaOs = () => {
 
     return <>
         <ModalDetalhesProcedimento showModal={showModal} setShowModal={setShowModal} procedimentos={procedimentoDetalhe} />
-        <div className="flex flex-col">
+        <div className="flex flex-col shadow-sm shadow-slate-300">
             <div className="overflow-x-auto">
                 <div className="p-1.5 w-full inline-block align-middle">
                     <div className="overflow-hidden border rounded-lg">
-                        <table className="min-w-full divide-y divide-gray-200">
+                        <table className="min-w-full divide-y table-fixed divide-gray-200">
                             <thead>
                                 <tr>
                                     <th
