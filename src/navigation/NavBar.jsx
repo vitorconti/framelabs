@@ -1,5 +1,5 @@
 import { Link, Outlet } from "react-router-dom"
-import imgLogo from '../assets/frame.jpeg'
+import imgLogo from '../assets/frame.png'
 function NavBar() {
 
 
@@ -7,7 +7,7 @@ function NavBar() {
         <div className="flex flex-col">
             <div className="h-12 bg-gradient-to-r from-purple-600 justify-between items-center to-purple-900 flex flex-row p-8">
                 <div>
-                    <img src={imgLogo} className="w-10 h-10" />
+                    <img src={imgLogo} className="rounded-full w-12 h-12" />
                 </div>
                 <div>
                     <ul className='text-white font-semibold flex text-xl space-x-2 font-sans'>
